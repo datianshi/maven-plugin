@@ -38,7 +38,6 @@ public class StartMojo
     	EchoServer echoServer = new EchoServer();
 		Thread thread = new Thread(echoServer);
     	EmbeddedRegistry.registry(echoServer);
-    	Runtime.getRuntime().addShutdownHook(new Thread(new ShutDownHookup()));
     	thread.start();
     }
 }

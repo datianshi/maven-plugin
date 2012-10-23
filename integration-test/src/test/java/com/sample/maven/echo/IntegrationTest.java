@@ -12,7 +12,8 @@ public class IntegrationTest {
 	@Test
 	public void test() throws IOException{
 		EchoClient c = new EchoClient();
-		Assert.assertEquals("SomeThing",c.callServer("SomeThing"));
+		String echoString = "SomeThing";
+		Assert.assertEquals(echoString,c.callServer(echoString));
 	}
 	
 }

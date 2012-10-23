@@ -7,6 +7,10 @@ import java.util.List;
 public class EmbeddedRegistry{
 	public static List<Registry> registries = new ArrayList<Registry>();
 	
+	static{
+		Runtime.getRuntime().addShutdownHook(new Thread(new ShutDownHookup()));
+	}
+	
 	public static void registry(Registry registry) {
 		registries.add(registry);
 	}

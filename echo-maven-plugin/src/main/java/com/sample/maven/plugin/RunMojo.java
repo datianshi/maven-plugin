@@ -18,7 +18,6 @@ public class RunMojo extends AbstractMojo{
 	public void execute() throws MojoExecutionException, MojoFailureException {
     	EchoServer echoServer = new EchoServer();
     	EmbeddedRegistry.registry(echoServer);
-    	Runtime.getRuntime().addShutdownHook(new Thread(new ShutDownHookup()));
     	echoServer.run();
 	}
 
